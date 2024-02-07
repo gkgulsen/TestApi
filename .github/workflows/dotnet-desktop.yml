@@ -27,7 +27,7 @@ jobs:
       with:
         host: 165.22.72.246
         username: root
-        password: 113401GK
+        key: ${{ secrets.SSH_KEY }}
         script: | 
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/testapi:latest
           docker stop hello || true
