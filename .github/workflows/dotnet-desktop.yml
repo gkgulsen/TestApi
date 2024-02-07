@@ -25,9 +25,9 @@ jobs:
     - name: Pull the image to VM and start it
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+        host: 165.22.72.246
+        username: root
+        password: 113401GK
         script: | 
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/testapi:latest
           docker stop hello || true
